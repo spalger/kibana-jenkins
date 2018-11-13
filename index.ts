@@ -1,6 +1,7 @@
 import { resolve } from 'path';
-import exampleRoute from './server/routes/example';
+import { graphqlRoute } from './server/routes/graphql';
 
+// tslint:disable-next-line no-default-export
 export default function(kibana: any) {
   return new kibana.Plugin({
     require: ['elasticsearch'],
@@ -21,9 +22,7 @@ export default function(kibana: any) {
     },
 
     init(server: any) {
-      // eslint-disable-line no-unused-vars
-      // Add server routes and initialize the plugin here
-      exampleRoute(server);
+      server.route(graphqlRoute);
     },
   });
 }

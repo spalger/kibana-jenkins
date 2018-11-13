@@ -12,6 +12,7 @@
     "preinstall": "node ../../kibana/preinstall_check",
     "kbn": "node ../../kibana/scripts/kbn",
     "lint": "eslint .",
+    "tslint": "tslint --project tsconfig.json",
     "start": "plugin-helpers start",
     "test:server": "plugin-helpers test:server",
     "test:browser": "plugin-helpers test:browser",
@@ -42,13 +43,18 @@
     "prettier": "^1.15.2",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.16.0",
+    "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.1.6"
   },
   "dependencies": {
     "@elastic/eui": "^5.0.1",
+    "apollo-boost": "^0.1.20",
+    "apollo-client": "^2.4.5",
+    "graphql": "^14.0.2",
     "moment": "^2.22.2",
     "prop-types": "15.6.0",
     "react": "16.3.1",
+    "react-apollo": "^2.2.4",
     "react-dom": "16.3.1"
   }
 }

@@ -1,36 +1,38 @@
-import React from 'react';
 import {
   EuiPage,
-  EuiPageHeader,
-  EuiTitle,
   EuiPageBody,
   EuiPageContent,
-  EuiPageContentHeader,
   EuiPageContentBody,
+  EuiPageContentHeader,
+  EuiPageHeader,
   EuiText,
+  EuiTitle,
 } from '@elastic/eui';
+import React from 'react';
+
+import { Jobs } from '../model/jobs';
 
 interface Props {
-  title: string
+  jobs: Jobs;
 }
 
-export const Main = ({ title }: Props) => (
+export const App = ({ jobs }: Props) => (
   <EuiPage>
     <EuiPageBody>
       <EuiPageHeader>
         <EuiTitle size="l">
-          <h1>{title} Hello World!</h1>
+          <h1>Jenkins</h1>
         </EuiTitle>
       </EuiPageHeader>
       <EuiPageContent>
         <EuiPageContentHeader>
           <EuiTitle>
-            <h2>Congratulations</h2>
+            <h2>Jobs</h2>
           </EuiTitle>
         </EuiPageContentHeader>
         <EuiPageContentBody>
           <EuiText>
-            <h3>You have successfully created your first Kibana Plugin!</h3>
+            <pre>{JSON.stringify(jobs)}</pre>
           </EuiText>
         </EuiPageContentBody>
       </EuiPageContent>

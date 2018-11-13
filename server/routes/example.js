@@ -1,11 +1,9 @@
-export default function (server) {
-
+export default function(server) {
   server.route({
     path: '/api/jenkins/example',
     method: 'GET',
     handler() {
-      return { time: (new Date()).toISOString() };
-    }
+      return { time: new Date().toISOString() };
+    },
   });
-
 }

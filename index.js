@@ -1,6 +1,6 @@
 import exampleRoute from './server/routes/example';
 
-export default function (kibana) {
+export default function(kibana) {
   return new kibana.Plugin({
     require: ['elasticsearch'],
     name: 'jenkins',
@@ -19,9 +19,10 @@ export default function (kibana) {
       }).default();
     },
 
-    init(server, options) { // eslint-disable-line no-unused-vars
+    init(server) {
+      // eslint-disable-line no-unused-vars
       // Add server routes and initialize the plugin here
       exampleRoute(server);
-    }
+    },
   });
 }

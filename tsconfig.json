@@ -1,0 +1,18 @@
+{
+  "extends": "../../kibana/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "ui/*": [
+        "../../kibana/src/ui/public/*"
+      ]
+    },
+  },
+  "include": [
+    "public/**/*.ts",
+    "public/**/*.tsx",
+    "server/**/*.ts",
+    "server/**/*.tsx",
+    "index.ts"
+  ]
+}

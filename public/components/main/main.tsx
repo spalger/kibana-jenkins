@@ -10,7 +10,11 @@ import {
   EuiText,
 } from '@elastic/eui';
 
-export const Main = ({ title }) => (
+interface Props {
+  title: string
+}
+
+export const Main = ({ title }: Props) => (
   <EuiPage>
     <EuiPageBody>
       <EuiPageHeader>
@@ -27,10 +31,6 @@ export const Main = ({ title }) => (
         <EuiPageContentBody>
           <EuiText>
             <h3>You have successfully created your first Kibana Plugin!</h3>
-            <p>
-              The server time (via API call) is{' '}
-              {this.state.time || 'NO API CALL YET'}
-            </p>
           </EuiText>
         </EuiPageContentBody>
       </EuiPageContent>

@@ -22,6 +22,11 @@
     "@elastic/eslint-config-kibana": "link:../../kibana/packages/eslint-config-kibana",
     "@elastic/eslint-import-resolver-kibana": "link:../../kibana/packages/kbn-eslint-import-resolver-kibana",
     "@kbn/plugin-helpers": "link:../../kibana/packages/kbn-plugin-helpers",
+    "@types/enzyme": "^3.1.15",
+    "@types/node": "8.10.21",
+    "@types/react": "^16.7.4",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-virtualized": "^9.18.7",
     "babel-eslint": "^9.0.0",
     "eslint": "^5.6.0",
     "eslint-config-prettier": "^3.3.0",
@@ -34,13 +39,16 @@
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
   },
   "dependencies": {
     "@elastic/eui": "^5.0.1",
     "moment": "^2.22.2",
-    "prop-types": "^15.5.0",
-    "react": "16.3.0",
-    "react-dom": "16.3.0"
+    "prop-types": "15.6.0",
+    "react": "16.3.1",
+    "react-dom": "16.3.1"
   }
 }

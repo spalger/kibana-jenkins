@@ -1,4 +1,4 @@
-export default function(server) {
+export default function(server: any) {
   server.route({
     path: '/api/jenkins/example',
     method: 'GET',

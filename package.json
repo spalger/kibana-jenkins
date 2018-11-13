@@ -34,7 +34,13 @@
     "eslint-plugin-prefer-object-spread": "^1.2.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
-    "expect.js": "^0.3.1",
     "prettier": "^1.15.2"
+  },
+  "dependencies": {
+    "@elastic/eui": "^5.0.1",
+    "moment": "^2.22.2",
+    "prop-types": "^15.5.0",
+    "react": "16.3.0",
+    "react-dom": "16.3.0"
   }
 }

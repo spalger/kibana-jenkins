@@ -1,5 +1,7 @@
+import { Server } from 'hapi';
 import { resolve } from 'path';
-import { graphqlRoute } from './server/routes/graphql';
+
+import { createGraphqlRoutes, graphiqlRoute } from './server';
 
 // tslint:disable-next-line no-default-export
 export default function(kibana: any) {
@@ -21,8 +23,9 @@ export default function(kibana: any) {
       }).default();
     },
 
-    init(server: any) {
-      server.route(graphqlRoute);
+    async init(server: Server) {
+      server.route(graphiqlRoute);
+      server.route(createGraphqlRoutes({ logFn: server.log }));
     },
   });
 }

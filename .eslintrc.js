@@ -50,6 +50,7 @@ module.exports = {
     {
       files: [
         '**/*.test.js',
+        'scripts/*',
       ],
       rules: {
         'import/no-extraneous-dependencies': [

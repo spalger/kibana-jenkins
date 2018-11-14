@@ -10,15 +10,7 @@
   },
   "scripts": {
     "preinstall": "node ../../kibana/preinstall_check",
-    "kbn": "node ../../kibana/scripts/kbn",
-    "lint": "eslint .",
-    "tslint": "tslint --project tsconfig.json",
-    "typecheck": "tsc --noEmit",
-    "start": "plugin-helpers start",
-    "test:server": "plugin-helpers test:server",
-    "test:browser": "plugin-helpers test:browser",
-    "build": "plugin-helpers build",
-    "es": "node ../../kibana/scripts/es"
+    "kbn": "node ../../kibana/scripts/kbn"
   },
   "dependencies": {
     "apollo-boost": "^0.1.20",

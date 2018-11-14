@@ -12,9 +12,9 @@ export default function(kibana: any) {
       app: {
         title: 'Jenkins',
         description: 'Jenkins View in Kibana',
-        main: 'plugins/jenkins/app',
+        main: 'plugins/jenkins/jenkins',
       },
-      styleSheetPaths: resolve(__dirname, 'public/app.scss'),
+      styleSheetPaths: resolve(__dirname, 'public/jenkins.scss'),
     },
 
     config(Joi: any) {

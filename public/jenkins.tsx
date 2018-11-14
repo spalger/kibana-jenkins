@@ -37,7 +37,7 @@ function RootController($scope: any, $element: any) {
   });
 
   // render react to DOM
-  render(<AppContainer client={client} /> as any, domNode);
+  render(<AppContainer client={client} />, domNode);
 
   // unmount react on controller destroy
   $scope.$on('$destroy', () => {

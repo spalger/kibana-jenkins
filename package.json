@@ -13,6 +13,7 @@
     "kbn": "node ../../kibana/scripts/kbn"
   },
   "dependencies": {
+    "@types/node-fetch": "^2.1.2",
     "apollo-boost": "^0.1.20",
     "apollo-client": "^2.4.5",
     "apollo-server-core": "^2.2.2",
@@ -23,6 +24,7 @@
     "hapi": "^17.7.0",
     "joi": "^14.0.6",
     "moment": "^2.22.2",
+    "node-fetch": "^2.3.0",
     "prop-types": "15.6.0",
     "react": "16.3.1",
     "react-apollo": "^2.2.4",

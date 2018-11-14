@@ -1,3 +1,4 @@
+import ApolloClient from 'apollo-boost';
 import React from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import 'ui/autoload/styles';
@@ -22,8 +23,15 @@ app.config(($locationProvider: any, stateManagementConfigProvider: any) => {
 function RootController($scope: any, $element: any) {
   const domNode = $element[0];
 
+  const client = new ApolloClient({
+    uri: chrome.addBasePath('/api/jenkins/graphql'),
+    headers: {
+      'kbn-version': chrome.getKibanaVersion(),
+    },
+  });
+
   // render react to DOM
-  render(<AppContainer /> as any, domNode);
+  render(<AppContainer client={client} /> as any, domNode);
 
   // unmount react on controller destroy
   $scope.$on('$destroy', () => {

@@ -2,7 +2,7 @@ import { ApolloClient } from 'apollo-client';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 
-import { Jobs } from '../components/jobs';
+import { App } from '../components/app';
 
 interface Props {
   client: ApolloClient<any>;
@@ -10,6 +10,6 @@ interface Props {
 
 export const AppContainer = ({ client }: Props) => (
   <ApolloProvider client={client}>
-    <Jobs />
+    <App />
   </ApolloProvider>
 );

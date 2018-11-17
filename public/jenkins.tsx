@@ -45,4 +45,5 @@ function RootController($scope: any, $element: any) {
   });
 }
 
+chrome.addApplicationClass('jenkins-app');
 chrome.setRootController('jenkins', RootController);

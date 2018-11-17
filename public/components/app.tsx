@@ -12,13 +12,18 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { JobDetailPage } from './job_detail_page';
 import { JobsSummaryPage } from './jobs_summary_page';
 
+const FullEuiPage = styled(EuiPage)`
+  flex: 1 1 auto;
+`;
+
 export const App = () => (
   <Router hashType="slash">
-    <EuiPage>
+    <FullEuiPage>
       <EuiPageBody>
         <EuiPageHeader>
           <EuiTitle size="l">
@@ -33,6 +38,6 @@ export const App = () => (
           </Switch>
         </EuiPageContent>
       </EuiPageBody>
-    </EuiPage>
+    </FullEuiPage>
   </Router>
 );

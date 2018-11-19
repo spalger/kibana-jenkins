@@ -13,6 +13,7 @@
     "kbn": "node ../../kibana/scripts/kbn"
   },
   "dependencies": {
+    "@jenkins/validate": "link:packages/jenkins-validate",
     "@types/node-fetch": "^2.1.2",
     "@types/react-router-dom": "^4.3.1",
     "@types/styled-components": "^4.1.0",
@@ -34,7 +35,8 @@
     "react-dom": "16.3.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "styled-components": "^4.1.1"
+    "styled-components": "^4.1.1",
+    "type-detect": "^4.0.8"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "link:../../kibana/packages/eslint-config-kibana",

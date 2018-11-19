@@ -9,11 +9,13 @@ import { Query } from 'react-apollo';
 
 const QUERY = gql`
   {
-    kibanaJobs {
+    jobsView(name: "Kibana") {
       name
-      type
+      displayName
       url
       color
+      inQueue
+      labelExpression
     }
   }
 `;

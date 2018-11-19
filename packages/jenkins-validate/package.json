@@ -1,0 +1,24 @@
+{
+  "name": "@jenkins/validate",
+  "main": "./target/out/index.js",
+  "types": "./target/types/index.d.ts",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "kbn:bootstrap": "yarn build"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.3",
+    "@types/lodash.isplainobject": "^4.0.4"
+  },
+  "peerDependencies": {
+    "joi": "10.4.1",
+    "moment": "^2.20.1",
+    "type-detect": "^4.0.8"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6"
+  }
+}

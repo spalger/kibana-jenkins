@@ -6,10 +6,10 @@
 
 import { runHttpQuery } from 'apollo-server-core';
 import * as ApolloServerEnv from 'apollo-server-env';
-
 import Boom from 'boom';
 import { Request, ResponseToolkit, ServerRoute } from 'hapi';
 
+import { JenkinsApi } from './jenkins_api';
 import { createSchema } from './schema';
 
 interface Opts {
@@ -20,6 +20,7 @@ export function createGraphqlRoutes({ logFn }: Opts) {
   const schema = createSchema(logFn);
 
   const realRequestCache = new WeakMap();
+  const api = new JenkinsApi();
 
   async function handler(request: Request, h: ResponseToolkit) {
     try {
@@ -30,6 +31,7 @@ export function createGraphqlRoutes({ logFn }: Opts) {
 
       const options = {
         context: {
+          api,
           req: {
             params: request.params,
             payload: request.payload,
